@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "@application/*": ["application/*"],
+      "@services/*": ["application/services/*"],
+      "@interfaces/*": ["application/interfaces/*"],
+      "@domain/*": ["domain/*"],
+      "@entities/*": ["domain/entities/*"],
+      "@domain/repositories/*": ["domain/repositories/*"],
+      "@infrastructure/*": ["infrastructure/*"],
+      "@infrastructure/repositories/*": ["infrastructure/repositories/*"],
+      "@infrastructure/api/*": ["infrastructure/api/*"],
+      "@database/*": ["infrastructure/database/*"],
+      "@presentation/*": ["presentation/*"],
+      "@controllers/*": ["presentation/controllers/*"],
+      "@views/*": ["presentation/views/*"],
+      "@shared/*": ["shared/*"],
+      "@helpers/*": ["shared/helpers/*"],
+      "@types/*": ["shared/types/*"]
+    },
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"]
+}
