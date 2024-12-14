@@ -1,15 +1,10 @@
-import {SnippetRepository} from "@domain/repositories/SnippetRepostitory";
-import {Snippet} from "@domain/domain/Snippet";
+import AppDataSource from '@infrastructure/database/ormconfig';
+import './presentation/api/index';
 
-
-export class SnippetRepositoryImpl implements SnippetRepository {
-    private snippets: Snippet[] = [];
-
-    async getAllSnippets(): Promise<Snippet[]> {
-        return this.snippets;
-    }
-
-    async saveSnippet(snippet: Snippet): Promise<void> {
-        this.snippets.push(snippet);
-    }
-}
+AppDataSource.initialize()
+    .then(() => {
+        console.log('Database connected successfully!');
+    })
+    .catch((error) => {
+        console.error('Error connecting to the database:', error);
+    });
