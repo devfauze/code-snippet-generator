@@ -1,4 +1,4 @@
-import {SnippetController} from "@services/SnippetController";
+import {SnippetController} from "@controllers/SnippetController";
 import { SnippetService } from "@services/SnippetService";
 import { Request, Response } from "express";
 
